@@ -1,5 +1,8 @@
 const pokeContainer = document.querySelector("#pokeContainer");
-const pokemonCount = 150;
+const pokemonCount = 1500;
+const pokemonsPerPage = 20; // Mostrar 20 pokémons por página
+let currentPage = 1; // Página inicial
+
 const colors = {
     fire: '#FDDFDF',
     grass: '#DEFDE0',
@@ -18,6 +21,9 @@ const colors = {
 };
 
 const mainTypes = Object.keys(colors);
+let allPokemons = []; // Para armazenar todos os pokémons
+
+
 
 const fetchPokemons = async () => {
     for (let i = 1; i <= pokemonCount; i++){

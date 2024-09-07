@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Pokedex</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <h1>Pokedex</h1>
@@ -21,22 +22,53 @@
     
             <!-- Botões de categoria -->
             <nav id="typeButtons" class="type-buttons hidden">
-                <button onclick="filterByType('all')">All</button>
-                <button onclick="filterByType('fire')" style="background-color: #FDDFDF;">Fire</button>
-                <button onclick="filterByType('grass')" style="background-color: #DEFDE0;">Grass</button>
-                <button onclick="filterByType('water')" style="background-color: #DEF3FD;">Water</button>
-                <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">Electric</button>
-                <button onclick="filterByType('ground')" style="background-color: #f4e7da;">Ground</button>
-                <button onclick="filterByType('rock')" style="background-color: #d5d5d4;">Rock</button>
-                <button onclick="filterByType('fairy')" style="background-color: #fceaff;">Fairy</button>
-                <button onclick="filterByType('poison')" style="background-color: #98d7a5;">Poison</button>
-                <button onclick="filterByType('bug')" style="background-color: #f8d5a3;">Bug</button>
-                <button onclick="filterByType('dragon')" style="background-color: #97b3e6;">Dragon</button>
-                <button onclick="filterByType('psychic')" style="background-color: #eaeda1;">Psychic</button>
-                <button onclick="filterByType('flying')" style="background-color: #F5F5F5;">Flying</button>
-                <button onclick="filterByType('fighting')" style="background-color: #E6E0D4;">Fighting</button>
-                <button onclick="filterByType('normal')" style="background-color: #F5F5F5;">Normal</button>
+                <button onclick="filterByType('all')" style="background-color: #000000">
+                    <i class="fas fa-th"></i> All
+                </button>
+                <button onclick="filterByType('fire')" style="background-color: #ff0000;">
+                    <i class="fas fa-fire"></i> Fire
+                </button>
+                <button onclick="filterByType('grass')" style="background-color: #228B22;">
+                    <i class="fas fa-leaf"></i> Grass
+                </button>
+                <button onclick="filterByType('water')" style="background-color: #4682B4;">
+                    <i class="fas fa-tint"></i> Water
+                </button>
+                <button onclick="filterByType('electric')" style="background-color: #FFD700;">
+                    <i class="fas fa-bolt"></i> Electric
+                </button>
+                <button onclick="filterByType('ground')" style="background-color: #fe8308;">
+                    <i class="fas fa-mountain"></i> Ground
+                </button>
+                <button onclick="filterByType('rock')" style="background-color: #6a6a68;">
+                    <i class="fas fa-gem"></i> Rock
+                </button>
+                <button onclick="filterByType('fairy')" style="background-color: #d504fa;">
+                    <i class="fas fa-magic"></i> Fairy
+                </button>
+                <button onclick="filterByType('poison')" style="background-color: #04f935;">
+                    <i class="fas fa-skull-crossbones"></i> Poison
+                </button>
+                <button onclick="filterByType('bug')" style="background-color: #f89307;">
+                    <i class="fas fa-bug"></i> Bug
+                </button>
+                <button onclick="filterByType('dragon')" style="background-color: #055afa;">
+                    <i class="fas fa-dragon"></i> Dragon
+                </button>
+                <button onclick="filterByType('psychic')" style="background-color: #9c9f32;">
+                    <i class="fas fa-brain"></i> Psychic
+                </button>
+                <button onclick="filterByType('flying')" style="background-color: #f00dac;">
+                    <i class="fas fa-feather-alt"></i> Flying
+                </button>
+                <button onclick="filterByType('fighting')" style="background-color: #fdab07;">
+                    <i class="fas fa-fist-raised"></i> Fighting
+                </button>
+                <button onclick="filterByType('normal')" style="background-color: #403e3e;">
+                    <i class="fas fa-circle"></i> Normal
+                </button>
             </nav>
+            
         </div>
 
     <div class="pokeContainer" id="pokeContainer"></div>
