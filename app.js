@@ -43,6 +43,12 @@ const createPokemonCard = (poke) => {
     const type = mainTypes.find(type => pokeTypes.indexOf(type) > -1);
     const color = colors[type]; 
 
+    // Aplica a cor de fundo com base no tipo
+card.style.backgroundColor = color;
+
+// Adiciona uma classe ao Pokémon com o tipo correspondente
+card.classList.add(type);
+
     card.style.backgroundColor = color;
 
     const pokemonInnerHTML = `
@@ -104,3 +110,39 @@ function pesquisar() {
 
     section.innerHTML = resultados;
 }
+
+
+//função de filtragem
+function filterPokemons() {
+    const searchInput = document.getElementById("searchInput").value.toLowerCase();
+    const allPokemons = document.querySelectorAll(".pokemon");
+
+    allPokemons.forEach((pokemon) => {
+        const name = pokemon.querySelector(".name").innerText.toLowerCase();
+        const type = pokemon.querySelector(".type span").innerText.toLowerCase();
+        const number = pokemon.querySelector(".number").innerText.toLowerCase();
+
+        if (name.includes(searchInput) || type.includes(searchInput) || number.includes(searchInput)) {
+            pokemon.style.display = "block";
+        } else {
+            pokemon.style.display = "none";
+        }
+    });
+}
+
+//função para filtrar por tipo
+function filterByType(type) {
+    const allPokemons = document.querySelectorAll(".pokemon");
+
+    allPokemons.forEach((pokemon) => {
+        const pokeType = pokemon.querySelector(".type span").innerText.toLowerCase();
+
+        if (type === 'all' || pokeType.includes(type)) {
+            pokemon.style.display = "block";
+        } else {
+            pokemon.style.display = "none";
+        }
+    });
+}
+
+

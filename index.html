@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Pokedex</title>
 </head>
-
 <body>
     <h1>Pokedex</h1>
-    <div class="pokeContainer" id="pokeContainer">
-    
-        
 
+    <!-- Campo de busca -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search by Name, Type or Number" oninput="filterPokemons()">
     </div>
 
-  
-    <!--<footer>
-        <p>2024 - Pokemons. Todos os direitos reservados</p>
-        <p>Implementado por Paulo Sergio</p>
-    </footer>-->
+    <!-- Botões de categoria -->
+    <div id="typeButtons" class="type-buttons">
+        <button onclick="filterByType('all')">All</button>
+        <button onclick="filterByType('fire')" style="background-color: #FDDFDF;">Fire</button>
+        <button onclick="filterByType('grass')" style="background-color: #DEFDE0;">Grass</button>
+        <button onclick="filterByType('water')" style="background-color: #DEF3FD;">Water</button>
+        <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">Electric</button>
+        <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">ground</button>
+        <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">rock</button>
+        <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">fairy</button>
+        <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">poison</button>
+        <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">bug</button>
+        <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">dragon</button>
+        <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">psychic</button>
+        <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">psychic</button>
+        <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">flying</button>
+        <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">fighting</button>
+        <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">normal</button>
+        <!-- Adicione mais botões de tipo aqui -->
+    </div>
+
+    <div class="pokeContainer" id="pokeContainer"></div>
+
     <script src="dados.js"></script>
     <script src="app.js"></script>
 </body>
-
 </html>
