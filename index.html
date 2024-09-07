@@ -14,28 +14,39 @@
         <input type="text" id="searchInput" placeholder="Search by Name, Type or Number" oninput="filterPokemons()">
     </div>
 
-    <!-- Botões de categoria -->
-    <div id="typeButtons" class="type-buttons">
-        <button onclick="filterByType('all')">All</button>
-        <button onclick="filterByType('fire')" style="background-color: #FDDFDF;">Fire</button>
-        <button onclick="filterByType('grass')" style="background-color: #DEFDE0;">Grass</button>
-        <button onclick="filterByType('water')" style="background-color: #DEF3FD;">Water</button>
-        <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">Electric</button>
-        <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">ground</button>
-        <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">rock</button>
-        <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">fairy</button>
-        <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">poison</button>
-        <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">bug</button>
-        <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">dragon</button>
-        <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">psychic</button>
-        <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">psychic</button>
-        <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">flying</button>
-        <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">fighting</button>
-        <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">normal</button>
-        <!-- Adicione mais botões de tipo aqui -->
-    </div>
+        <!-- Menu Hamburguer -->
+        <div class="menu-hamburguer">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    
+            <!-- Botões de categoria -->
+            <nav id="typeButtons" class="type-buttons hidden">
+                <button onclick="filterByType('all')">All</button>
+                <button onclick="filterByType('fire')" style="background-color: #FDDFDF;">Fire</button>
+                <button onclick="filterByType('grass')" style="background-color: #DEFDE0;">Grass</button>
+                <button onclick="filterByType('water')" style="background-color: #DEF3FD;">Water</button>
+                <button onclick="filterByType('electric')" style="background-color: #FCF7DE;">Electric</button>
+                <button onclick="filterByType('ground')" style="background-color: #f4e7da;">Ground</button>
+                <button onclick="filterByType('rock')" style="background-color: #d5d5d4;">Rock</button>
+                <button onclick="filterByType('fairy')" style="background-color: #fceaff;">Fairy</button>
+                <button onclick="filterByType('poison')" style="background-color: #98d7a5;">Poison</button>
+                <button onclick="filterByType('bug')" style="background-color: #f8d5a3;">Bug</button>
+                <button onclick="filterByType('dragon')" style="background-color: #97b3e6;">Dragon</button>
+                <button onclick="filterByType('psychic')" style="background-color: #eaeda1;">Psychic</button>
+                <button onclick="filterByType('flying')" style="background-color: #F5F5F5;">Flying</button>
+                <button onclick="filterByType('fighting')" style="background-color: #E6E0D4;">Fighting</button>
+                <button onclick="filterByType('normal')" style="background-color: #F5F5F5;">Normal</button>
+            </nav>
+        </div>
 
     <div class="pokeContainer" id="pokeContainer"></div>
+
+        <!-- Paginação -->
+        <div class="pagination-container">
+            <button id="prevButton" onclick="prevPage()">Anterior</button>
+            <span id="pageNumber"></span>
+            <button id="nextButton" onclick="nextPage()">Próxima</button>
+        </div>
 
     <script src="dados.js"></script>
     <script src="app.js"></script>
